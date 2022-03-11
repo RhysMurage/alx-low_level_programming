@@ -3,9 +3,9 @@
 /**
  * main - Entry point
  *
- * Description: prints "Prgramming is like building a multilingual puzzle"
+ * main - prints "Prgramming is like building a multilingual puzzle"
  *
- * Return - Always 0 (Success)
+ * Return: Always 0 (Success)
  */
 
 int main(void)
