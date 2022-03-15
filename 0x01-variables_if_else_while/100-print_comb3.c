@@ -10,17 +10,17 @@
 
 int main(void)
 {
-	int l, m, n = 0;
+	int i, k, j = 0;
 
-	for (l = 0; l < 10; l++)
+	for (i = 0; i < 10; i++)
 	{
-		for (m = l; m < 10; m++)
+		for (k = j; k < 10; k++)
 		{
-			if (l != n)
+			if (i != k)
 			{
-				putchar(l + '0');
-				putchar(m + '0');
-				if (l == 8 && m == 9)
+				putchar(i + '0');
+				putchar(k + '0');
+				if (i == 8 && k == 9)
 				{
 				}
 				else
@@ -30,7 +30,7 @@ int main(void)
 				}
 			}
 		}
-		n++;
+		j++;
 	}
 	putchar('\n');
 	return (0);
