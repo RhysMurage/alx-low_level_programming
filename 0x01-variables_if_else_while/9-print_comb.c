@@ -11,20 +11,17 @@
 int main(void)
 {
 	int n;
-	int m;
 
-	for (n = '0'; n <= '9';)\
+	for (n = '0'; n <= '9'; n++)
 	{
-		for (m = '0'; m <= '9';)
-		{
-		       putchar(n);
-		       putchar(m);
-		       putchar(',');
-		       m++;
-		}
-		n++;
-	putchar('\n');
+	       putchar(n);
+	       putchar(',');
+	       putchar(' ');
 	}
+		      
+
+putchar('\n');
+
 return (0);	
 
 }
