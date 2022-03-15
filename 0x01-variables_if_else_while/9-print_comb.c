@@ -23,7 +23,6 @@ int main(void)
 		       m++;
 		}
 		n++;
-		putchar(n);
 	putchar('\n');
 	}
 return (0);	
