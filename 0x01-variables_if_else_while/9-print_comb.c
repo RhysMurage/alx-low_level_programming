@@ -10,18 +10,35 @@
 
 int main(void)
 {
-	int n;
+	int n, counter, numbervariants, asciivalue = 0;
 
-	for (n = '0'; n <= '9'; n++)
+	counter = 0;
+	numbervariants = 48;
+
+	for (n = 0; n < 28; n++)
 	{
-	       putchar(n);
-	       putchar(',');
-	       putchar(' ');
+		asciivalue = 0;
+		switch (counter)
+		{
+			case 0:
+				asciivalue = numbervariants;
+				numbervariants++;
+				break;
+			case 1:
+				asciivalue = 44;
+				break;
+			case 2:
+				asciivalue = 32;
+				break;
+			default:
+				break;
+		}
+		counter++;
+		if (counter > 2)
+			counter = 0;
+		putchar(asciivalue);
 	}
-		      
+	putchar('\n');
 
-putchar('\n');
-
-return (0);	
-
+	return (0);
 }
