@@ -10,7 +10,7 @@ long add(long first, long second);
  * Return: Always (0) Success
  */
 
-int main(void)
+long main(void)
 {
 	long count = 0;
 	long z;
