@@ -1,40 +1,40 @@
 #include "main.h"
-#include<stdio.h>
+#include <stdio.h>
 
 /**
- *print_to_98- this function prints values passed in to 98
- *@n: this is the value passed in
+ * print_to_98- prints all natural numbers from n to 98
+ * @n: natural number to be printed
+ *
  */
+
+void print_to_98(int n);
 
 void print_to_98(int n)
 {
-	if (n <= 98)
+	if (n == 98)
 	{
-		int i = 0;
-
-		for (i = n; i < 99; i++)
-		{
-			printf("%d", i);
-			if (i != 98)
-			{
-				putchar(',');
-				putchar(' ');
-			}
-		}
+		printf("%d", n);
+		printf("\n");
 	}
 	else if (n > 98)
 	{
-		int k = 0;
-
-		for (k = n; k > 97; k--)
+		while (n > 98)
 		{
-			printf("%d", k);
-			if (k != 98)
-			{
-				putchar(',');
-				putchar(' ');
-			}
+			printf("%d, ", n);
+			n--;
+			if (n == 98)
+				printf("%d", n);
+		}
+		printf("\n");
+	}
+	else
+	{
+		while (n < 98)
+		{
+			printf("%d, ", n);
+			n++;
+			if (n == 98)
+				printf("%d", n);
 		}
 	}
-	putchar('\n');
 }
