@@ -23,12 +23,11 @@ int main(void)
 	while (z <= 4000000)
 	{
 		z = add(x, y);
-		
 		modulo_x = x % 2;
 		modulo_y = y % 2;
 		modulo_z = z % 2;
 
-		switch(modulo_x)
+		switch (modulo_x)
 		{
 			case 0:
 				sum = sum + x;
@@ -37,7 +36,7 @@ int main(void)
 				sum = sum + 0;
 		}
 
-		switch(modulo_y)
+		switch (modulo_y)
 		{
 			case 0:
 				sum = sum + y;
@@ -46,7 +45,7 @@ int main(void)
 				sum = sum + 0;
 		}
 
-		switch(modulo_z)
+		switch (modulo_z)
 		{
 			case 0:
 				sum = sum + z;
@@ -60,7 +59,7 @@ int main(void)
 		y = z;
 
 	}
-		
+
 	printf("%ld\n", sum);
 
 	return (0);
