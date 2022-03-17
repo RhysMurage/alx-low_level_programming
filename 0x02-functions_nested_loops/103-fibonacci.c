@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-long add(long first, long second);
+int add(int first, int second);
 
 /**
  * main- Entry point of function
@@ -12,57 +12,35 @@ long add(long first, long second);
 
 int main(void)
 {
-	long z;
-	long modulo_x;
-	long modulo_y;
-	long modulo_z;
-	long sum = 0;
-	long x = 1;
-	long y = 2;
+	int z;
+	int sum = 0;
+	int u;
+	int v;
+	int x = 1;
+	int y = 2;
 
-	while (z <= 4000000)
+	while (z < 4000000)
 	{
+		u = y;
+		v = z;
+
 		z = add(x, y);
-		modulo_x = x % 2;
-		modulo_y = y % 2;
-		modulo_z = z % 2;
-
-		switch (modulo_x)
-		{
-			case 0:
-				sum = sum + x;
-				break;
-			default:
-				sum = sum + 0;
-		}
-
-		switch (modulo_y)
-		{
-			case 0:
-				sum = sum + y;
-				break;
-			default:
-				sum = sum + 0;
-		}
-
-		switch (modulo_z)
-		{
-			case 0:
-				sum = sum + z;
-				break;
-			default:
-				sum = sum + 0;
-		}
-
+		if ((x % 2 == 0) & (x != u))
+			sum += x;
+		else
+			sum += 0;
+		if ((y % 2 == 0) & (y != v))
+			sum += y;
+		else
+			sum += 0;
+		if (z % 2 == 0)
+			sum += z;
+		else
+			sum += 0;
 
 		x = y;
 		y = z;
-
 	}
-
-	printf("%ld\n", sum);
-
-	return (0);
 }
 
 
@@ -75,7 +53,7 @@ int main(void)
  *
  */
 
-long add(long first, long second)
+int add(int first, int second)
 {
 	return (first + second);
 }
