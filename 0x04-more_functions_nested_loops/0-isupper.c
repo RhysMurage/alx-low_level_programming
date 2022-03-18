@@ -6,8 +6,6 @@
  * Return: 0 if lowercase, 1 otherwise
  */
 
-int _isupper(int c);
-
 int _isupper(int c)
 {
 	if (c > 90)
