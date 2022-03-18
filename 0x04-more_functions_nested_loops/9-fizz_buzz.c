@@ -24,7 +24,7 @@ int main(void)
 		else
 			printf("%d ", i);
 	}
-	
+
 	for (; j <= 100; j++)
 		printf("Buzz");
 
