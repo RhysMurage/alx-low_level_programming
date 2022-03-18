@@ -1,6 +1,8 @@
 #include "main.h"
 
-/*
+/**
+ * print_line- function that draws a line
+ * @n: length of line
  */
 
 void print_line(int n);
