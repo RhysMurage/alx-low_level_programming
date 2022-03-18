@@ -11,7 +11,7 @@ void print_line(int n)
 {
 	int l = 0;
 
-	if (n >= 0)
+	if (n > 0)
 	{
 		while (l <= n)
 		{
@@ -21,5 +21,5 @@ void print_line(int n)
 		_putchar('\n');
 	}
 	else
-		print('\n');
+		_putchar('\n');
 }
