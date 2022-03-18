@@ -11,8 +11,9 @@
 int main(void)
 {
 	int i = 1;
+	int j = 100;
 
-	for (; i <= 100; i++)
+	for (; i <= 99; i++)
 	{
 		if ((i % 3 == 0) && (i % 5 == 0))
 			printf("FizzBuzz ");
@@ -23,6 +24,9 @@ int main(void)
 		else
 			printf("%d ", i);
 	}
+	
+	for (; j <= 100; j++)
+		printf("Buzz");
 
 	putchar('\n');
 
