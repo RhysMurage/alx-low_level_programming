@@ -18,9 +18,9 @@ unsigned int _strspn(char *s, char *accept)
 
 	while (*s)
 	{
-		while(*accept)
+		while (*accept)
 		{
-			if (*s = *accept)
+			if (*s == *accept)
 			{
 				check++;
 				seen = 1;
@@ -29,17 +29,13 @@ unsigned int _strspn(char *s, char *accept)
 		}
 		if (check != 0)
 		{
-			val += check;
+			i += check;
 		}
 		else if (seen == 1)
 			break;
-		accept = ptr
+		accept = ptr;
 		s++;
 		check = 0;
 	}
-	return (val);
-}
-	}
-
 	return (i);
 }
