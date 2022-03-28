@@ -12,7 +12,6 @@ char *_strchr(char *s, char c);
 char *_strchr(char *s, char c)
 {
 	char *ptr;
-
 	int posn = 0;
 
 	while (s[posn] != c)
