@@ -13,6 +13,7 @@ char *_memcpy(char *dest, char *src, unsigned int n);
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
 	unsigned int area = 0;
+	char *ptr = dest;
 
 	for (area = 0; area < n; ++area)
 	{
@@ -21,5 +22,5 @@ char *_memcpy(char *dest, char *src, unsigned int n)
 		dest++;
 	}
 
-	return (dest);
+	return (ptr);
 }
