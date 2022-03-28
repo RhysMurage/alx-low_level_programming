@@ -29,11 +29,11 @@ char *_strpbrk(char *s, char *accept)
 
 		if (seen == 1)
 		{
-			ptr2 = s;
+			ptr = s;
 			break;
 		}
 		s++;
 		accept = ptr2;
 	}
-	return (ptr2);
+	return (ptr);
 }
