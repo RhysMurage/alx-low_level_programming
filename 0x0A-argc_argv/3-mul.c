@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 		firstNum = strtol(argv[1], NULL, 10);
 		secondNum = strtol(argv[2], NULL, 10);
 		product = firstNum * secondNum;
-		printf("%lu\n", product);
+		printf("%ld\n", product);
 		return (0);
 	}
 	else
