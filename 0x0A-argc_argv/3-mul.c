@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 	long firstNum;
 	long secondNum;
 
-	if ((argc > 1) & (argc < 3))
+	if (argc == 3)
 	{
 		firstNum = strtol(argv[1], NULL, 10);
 		secondNum = strtol(argv[2], NULL, 10);
