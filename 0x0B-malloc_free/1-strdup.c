@@ -24,7 +24,7 @@ char *_strdup(char *str)
 	/* check return value of malloc */
 	if (ptr == NULL)
 		return (NULL);
-	
+
 	if (str == NULL)
 		return (NULL);
 
