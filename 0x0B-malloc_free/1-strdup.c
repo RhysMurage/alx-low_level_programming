@@ -22,11 +22,10 @@ char *_strdup(char *str)
 	ptr = malloc((len) * sizeof(char));
 
 	/* check return value of malloc */
-
-	if (str == NULL)
-		return (NULL);
-
 	if (ptr == NULL)
+		return (NULL);
+	
+	if (*str == '\0')
 		return (NULL);
 
 	for (j = 0; str[j] != '\0'; j++)
