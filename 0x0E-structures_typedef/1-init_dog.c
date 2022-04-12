@@ -12,14 +12,8 @@
 
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-	struct dog *ptr;
-
-	/* Dereference the pointer */
-	ptr = d;
-
-	/* Access elements and assign to the other variables */
-	(*ptr).name = name;
-	(*ptr).age = age;
-	(*ptr).owner = owner;
+	d->name = name;
+	d->age = age;
+	d->owner = owner;
 }
 
