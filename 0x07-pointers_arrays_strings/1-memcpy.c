@@ -2,8 +2,8 @@
 
 /**
   *_memcpy- Copies memory area
-  *@dest: pointer to a character
-  *@src: pointer to a character
+  *@dest: pointer to an array
+  *@src: pointer to an array
   *@n: integer n
   *Return: a pointer to dest
   */
