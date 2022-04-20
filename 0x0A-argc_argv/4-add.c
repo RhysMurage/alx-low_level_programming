@@ -5,13 +5,13 @@
   * main- adds positive numbers
   * @argc: number of arguments
   * @argv: pointer to an array of arguments
-  * 
+  *
   * Return: always 0: 1 otherwise
   */
 
 int main(int argc, char *argv[])
 {
-	int counter = 1; 
+	int counter = 1;
 	long sum = 0;
 	long number = 0;
 	char error[] = "Error";
