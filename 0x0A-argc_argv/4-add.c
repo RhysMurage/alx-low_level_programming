@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 		{
 			printf("%s\n", error);
 			return (0);
-		}	
+		}
 		sum += number;
 		++counter;
 		--argc;
