@@ -12,9 +12,9 @@ void free_list(list_t *head)
 
 	while (head)
 	{
-		nextemp = head;
-		head = head->next;
-		free(nextemp);
-		free(nextemp->str);
+		nextemp = head->next;
+		free(head->str);
+		free(head);
+		head = nextemp;
 	}
 }
