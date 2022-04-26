@@ -1,36 +1,48 @@
-#include "lists.h"
 #include <stdlib.h>
+#include <string.h>
+#include "lists.h"
 
 /**
- * insert_nodeint_at_index - Sums all the values of the list
- * @head: pointer to the first node of list
- * @idx: index to insert
- * @n: the data to insert at node
- * Return: returns address to node
+ * insert_nodeint_at_index - inserts new node at a given position
+ * @head: pointer to linked ist
+ * @idx: potition to add new node
+ * @n: data
+ * Return: pointer to new node
  */
+
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-	unsigned int iterator = 0;
-	listint_t *newnode;
-	listint_t *tmpHead;
+	unsigned int i = 0;
+	listint_t *temp = *head;
+	listint_t *new;
 
-	if (head == NULL)
+	new = malloc(sizeof(listint_t));
+	if (!new || !head)
 		return (NULL);
-	newnode = malloc(sizeof(listint_t));
-	if (newnode == NULL)
-		return (NULL);
-	newnode->n = n;
-	tmpHead = *head;
-	while (tmpHead)
+
+	new->n = n;
+	new->next = NULL;
+
+	if (idx == 0)
 	{
-		if (iterator == idx)
+		new->next = *head;
+		*head = new;
+		return (new);
+	}
+
+
+	while (temp && i < idx)
+	{
+
+		if (i == idx - 1)
 		{
-			newnode->next = tmpHead->next;
-			tmpHead->next = newnode;
-			return (newnode);
+			new->next = temp->next;
+			temp->next = new;
+			return (new);
 		}
-		tmpHead = tmpHead->next;
-		iterator++;
+		else
+			temp = temp->next;
+		i++;
 	}
 	return (NULL);
 }
