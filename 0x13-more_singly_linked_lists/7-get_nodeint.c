@@ -19,7 +19,6 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 		if (indexatnode == index)
 		{
 			return (head);
-			break;
 		}
 		head = head->next;
 		indexatnode++;
