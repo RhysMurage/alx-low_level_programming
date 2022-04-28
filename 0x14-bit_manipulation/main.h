@@ -5,6 +5,8 @@ int _putchar(char c);
 
 int _strlen(const char *s);
 
+void _divide(unsigned long int n);
+
 unsigned int binary_to_uint(const char *b);
 
 void print_binary(unsigned long int n);
