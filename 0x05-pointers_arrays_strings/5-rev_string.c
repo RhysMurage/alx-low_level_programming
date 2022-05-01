@@ -5,21 +5,27 @@
  * @s: pointer parsed to the function
  */
 
-void rev_string(char *s);
-
 void rev_string(char *s)
 {
-	int length = 0;
 	int i = 0;
+	int j = 0;
+	int right = 0;
+	int len = 0;
 	char temp;
 
-	while (s[i++])
-		length++;
+	/* get lenght of string */
+	while (s[j])
+	{
+		len++;
+		j++;
+	}
+	right = len - 1;
 
-	for (i = length - 1; i >= length / 2; i--)
+	for (i = 0; i <= right; i++)
 	{
 		temp = s[i];
-		s[i] = s[length - i - 1];
-		s[length - i - 1] = temp;
+		s[i] = s[right];
+		s[right] = temp;
+		right--;
 	}
 }
