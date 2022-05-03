@@ -10,7 +10,7 @@
 int _atoi(char *s)
 {
 	/* initialize result */
-	int result = 0;
+	unsigned int result = 0;
 	/* initialize index of first digit */
 	int j = 0;
 	/* count of negatives */
@@ -22,7 +22,7 @@ int _atoi(char *s)
 		length++;
 
 	/* if string is preceeded by infinite characters */
-	for (; j < length; j++)
+	for (j = 0; j <= length; j++)
 	{
 		if ((s[j] < 48) | (s[j] > 57))
 		{
@@ -30,13 +30,13 @@ int _atoi(char *s)
 				++count;
 			continue;
 		}
-		if ((s[j] >= 48) | (s[j + 1] <= 57))
+		if ((s[j] >= 48) | (s[j] <= 57))
 		{
-			result = result * 10 + s[j] - '0';
-			if ((s[j + 1] < 48) | (s[j + 1] > 57))
+			result = (result * 10) + s[j] - '0';
+			if (((s[j + 1] < 48) | (s[j + 1] > 57)) | (s[j + 1] == '\0'))
 			{
 				if (count % 2 != 0)
-					result = result * -1;
+					result = -result;
 						break;
 			}
 		}
