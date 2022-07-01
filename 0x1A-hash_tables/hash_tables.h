@@ -49,4 +49,10 @@ void hash_table_print(const hash_table_t *ht);
 
 void hash_table_delete(hash_table_t *ht);
 
+void print_list(hash_node_t *h);
+
+void free_list(hash_node_t *head);
+
+unsigned long int helper_key_index(const char *key, unsigned long int size);
+
 #endif
