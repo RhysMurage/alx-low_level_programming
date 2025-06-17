@@ -13,8 +13,8 @@ int main(void) {
     int ft,fo, st, so;
 
     for (ft=48; ft < 58; ft++){
-        for(fo=ft; fo < 58; fo++) {
-            for (st=ft; st < 58; st++){
+        for(fo=48; fo < 58; fo++) {
+            for (st=48; st < 58; st++){
                 for (so=48; so < 58; so++) {
                     putchar(ft);
                     putchar(fo);
